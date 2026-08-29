@@ -31,21 +31,21 @@ $$
 $$
 
 $$
-\mathrm{MAE}=\operatorname{mean}_t|S_t-O_t|
+\mathrm{MAE}=\frac{1}{n}\sum_t|S_t-O_t|
 $$
 
 $$
-\mathrm{RMSE}=\sqrt{\operatorname{mean}_t(S_t-O_t)^2}
+\mathrm{RMSE}=\sqrt{\frac{1}{n}\sum_t(S_t-O_t)^2}
 $$
 
 $$
-\mathrm{PBIAS}(\%)=100\frac{\sum_t(S_t-O_t)}{\sum_tO_t}
+\mathrm{PBIAS}=100\frac{\sum_t(S_t-O_t)}{\sum_tO_t}
 $$
 
 The workflow preserves the paper's model-based nMAE denominator:
 
 $$
-\mathrm{nMAE}(\%)=100\frac{\mathrm{MAE}}{\overline{S}}.
+\mathrm{nMAE}=100\frac{\mathrm{MAE}}{\overline{S}}.
 $$
 
 Thus, the analysis normalizes precipitation MAE by the corresponding CONUS404 or CONUS404BA mean, ET MAE by the CONUS404 ET mean, and runoff MAE by the CONUS404 basin runoff mean. The workflow retains a true MAE or PBIAS value of zero as a valid result rather than converting it to nodata.
