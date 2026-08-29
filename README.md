@@ -27,7 +27,7 @@ The standalone runoff notebook reproduces the full cloud-to-basin sequence from 
 For modeled values (S_t) and reference values (O_t), the analysis calculates:
 
 $$
-\mathrm{MBE}=\operatorname{mean}_t(S_t-O_t)
+\mathrm{MBE}=\frac{1}{n}\sum_t(S_t-O_t)
 $$
 
 $$
