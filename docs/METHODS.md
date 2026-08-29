@@ -166,6 +166,7 @@ $$
 RU=100\frac{SE}{\overline{X}}.
 $$
 
-The multiannual mean and standard error have units of millimeters, both variance quantities have units of square millimeters, and relative uncertainty is dimensionless before conversion to percent. The workflow masks variance-derived quantities when fewer than two valid annual values are present and masks relative uncertainty when the multiannual mean is not positive.
+RU is reported as a percentage. The multiannual mean and standard error have units of millimeters, both variance quantities have units of square millimeters, and relative uncertainty is dimensionless before conversion to percent. The workflow masks variance-derived quantities when fewer than two valid annual values are present and masks relative uncertainty when the multiannual mean is not positive.
 
 For every dataset, the workflow writes valid-year count, multiannual mean, interannual variance, jackknife variance of the mean, standard error of the mean, relative-uncertainty fraction, and relative-uncertainty percent. The analysis summarizes multiannual mean, standard error, and relative uncertainty by climate region with the same violin and statistics convention used in the accuracy assessment.
+
