@@ -1,0 +1,32 @@
+name: conus404-water-balance
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - jupyterlab
+  - ipykernel
+  - numpy
+  - pandas
+  - xarray
+  - dask
+  - distributed
+  - cf_xarray
+  - sparse
+  - intake
+  - intake-xarray
+  - zarr<3
+  - s3fs
+  - fsspec
+  - metpy
+  - cartopy
+  - rasterio
+  - rioxarray
+  - geopandas
+  - fiona
+  - shapely
+  - pynhd
+  - hydrofunctions
+  - scikit-learn
+  - matplotlib
+  - pyyaml
+  - pytest

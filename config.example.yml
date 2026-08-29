@@ -1,0 +1,190 @@
+study:
+  accuracy:
+    precipitation:
+      annual: {start_year: 1981, end_year: 2020}
+      seasonal: {start_year: 1981, end_year: 2020}
+    evapotranspiration:
+      annual: {start_year: 2001, end_year: 2017}
+      seasonal: {start_year: 2001, end_year: 2017}
+    runoff:
+      annual: {start_year: 1989, end_year: 2010}
+  correlation:
+    annual: {start_year: 1981, end_year: 2018}
+  interannual_variability:
+    precipitation:
+      annual: {start_year: 1981, end_year: 2021}
+    evapotranspiration:
+      annual: {start_year: 2001, end_year: 2017}
+
+components:
+  precipitation:
+    models:
+      conus404:
+        enabled: true
+        label: CONUS404
+        annual_dir: data/annual/conus404
+        annual_pattern: RAIN_Mean_Annual_precipitation_WY{year}.tif
+        seasonal_dir: data/seasonal/conus404
+        seasonal_pattern: ET_Mean_Seasonal_RAIN_CONUS404_{year}{suffix}.tif
+      conus404ba:
+        enabled: true
+        label: CONUS404BA
+        annual_dir: data/annual/conus404ba
+        annual_pattern: RAIN_Mean_Annual_precipitation_WY{year}.tif
+        seasonal_dir: data/seasonal/conus404ba
+        seasonal_pattern: ET_Mean_Seasonal_RAIN_CONUS404_{year}{suffix}.tif
+    references:
+      daymet:
+        enabled: true
+        label: DAYMET
+        annual_dir: data/annual/daymet
+        annual_pattern: DAYMET_Precip_WY_{year}.tif
+        seasonal_dir: data/seasonal/daymet
+        seasonal_pattern: DAYMET_{season}_Precip_{year}.tif
+      prism:
+        enabled: true
+        label: PRISM
+        annual_dir: data/annual/prism
+        annual_pattern: PRISM_Precip_WY_{year}.tif
+        seasonal_dir: data/seasonal/prism
+        seasonal_pattern: PRISM_{season}_Precip_{year}.tif
+
+  evapotranspiration:
+    models:
+      conus404:
+        enabled: true
+        label: CONUS404
+        annual_dir: data/annual/aet_conus404
+        annual_pattern: CONUS_AET_WY{year}.tif
+        seasonal_dir: data/seasonal/aet_conus404
+        seasonal_pattern: CONUS404_AET_{season}_{year}{suffix}.tif
+    references:
+      sanford:
+        enabled: true
+        label: Sanford WBET
+        annual_dir: data/annual/aet_sanford
+        annual_pattern: AET_{year}.tif
+        seasonal_dir: data/seasonal/aet_sanford
+        seasonal_pattern: HETCUS_{season}_AET_{year}.tif
+      modis:
+        enabled: true
+        label: MOD16A2GF.061
+        annual_dir: data/annual/aet_modis
+        annual_pattern: MODIS_AET_WY_{year}.tif
+        seasonal_dir: data/seasonal/aet_modis
+        seasonal_pattern: MODIS_{season}_AET_{year}.tif
+
+runoff:
+  input_csv: results/runoff_hytest_nldi/aligned_annual_runoff.csv
+  gage_points_file: results/runoff_hytest_nldi/nldi_gage_points.gpkg
+  columns:
+    basin_id: Gage_ID
+    year: Year
+    observed: Runoff_Annual
+    modeled: Runoff_Squaw
+  gage_id_field: Gage_ID
+  minimum_years: 3
+
+seasons:
+  Fall: {suffix: "1230"}
+  Winter: {suffix: "0330"}
+  Spring: {suffix: "0630"}
+  Summer: {suffix: "0930"}
+
+correlation:
+  precipitation_model_dir: data/annual/conus404
+  precipitation_model_pattern: RAIN_Mean_Annual_precipitation_WY{year}.tif
+  precipitation_reference_dir: data/annual/prism
+  precipitation_reference_pattern: PRISM_Precip_WY_{year}.tif
+  evapotranspiration_model_dir: data/annual/aet_conus404
+  evapotranspiration_model_pattern: CONUS_AET_WY{year}.tif
+  evapotranspiration_reference_dir: data/annual/aet_sanford
+  evapotranspiration_reference_pattern: AET_{year}.tif
+  minimum_valid_years: 3
+  domain_mask: results/accuracy/evapotranspiration/annual/conus404_vs_sanford/nmae_percent.tif
+  domain_mask_minimum: 0.0
+  domain_mask_maximum: 300.0
+
+interannual_variability:
+  precipitation:
+    grid_reference: conus404
+    datasets:
+      conus404:
+        enabled: true
+        label: CONUS404
+        annual_dir: data/annual/conus404
+        annual_pattern: RAIN_Mean_Annual_precipitation_WY{year}.tif
+      conus404ba:
+        enabled: true
+        label: CONUS404BA
+        annual_dir: data/annual/conus404ba
+        annual_pattern: RAIN_Mean_Annual_precipitation_WY{year}.tif
+      prism:
+        enabled: true
+        label: PRISM
+        annual_dir: data/annual/prism
+        annual_pattern: PRISM_Precip_WY_{year}.tif
+  evapotranspiration:
+    grid_reference: conus404
+    datasets:
+      conus404:
+        enabled: true
+        label: CONUS404
+        annual_dir: data/annual/aet_conus404
+        annual_pattern: CONUS_AET_WY{year}.tif
+      sanford:
+        enabled: true
+        label: Sanford WBET
+        annual_dir: data/annual/aet_sanford
+        annual_pattern: AET_{year}.tif
+      modis:
+        enabled: true
+        label: MOD16A2GF.061
+        annual_dir: data/annual/aet_modis
+        annual_pattern: MODIS_AET_WY_{year}.tif
+
+regions:
+  file: data/boundaries/climate_regions.gpkg
+  name_field: Cliamate
+  code_field: CR
+
+output_dir: results
+
+processing:
+  resampling: bilinear
+  require_positive_values: true
+  exclude_exact_zero_from_distributions: false
+  export_yearly_pbias: true
+
+figures:
+  dpi: 1200
+  colors: ["#feeff7", "#bdc9e1", "#67a9cf", "#016c59", "#1c9099", "#225ea8"]
+  accuracy:
+    precipitation:
+      annual_nmae_range: [0.0, 50.0]
+      annual_pbias_range: [-50.0, 50.0]
+      seasonal_nmae_range: [0.0, 100.0]
+      seasonal_pbias_range: [-100.0, 100.0]
+      seasonal_model: conus404ba
+      seasonal_reference: prism
+    evapotranspiration:
+      annual_nmae_range: [0.0, 300.0]
+      annual_pbias_range: [-500.0, 500.0]
+      seasonal_nmae_range: [0.0, 500.0]
+      seasonal_pbias_range: [-500.0, 500.0]
+      seasonal_model: conus404
+      seasonal_reference: sanford
+    runoff:
+      nmae_range: [0.0, 100.0]
+      pbias_range: [-100.0, 100.0]
+  correlation:
+    range: [-1.0, 1.0]
+  interannual_variability:
+    precipitation:
+      mean_range: [0.0, 2000.0]
+      standard_error_range: [0.0, 100.0]
+      relative_uncertainty_range: [0.0, 50.0]
+    evapotranspiration:
+      mean_range: [0.0, 1500.0]
+      standard_error_range: [0.0, 100.0]
+      relative_uncertainty_range: [0.0, 50.0]
