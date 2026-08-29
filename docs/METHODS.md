@@ -163,7 +163,7 @@ $$
 and
 
 $$
-RU(\%)=100\frac{SE}{\overline{X}}.
+RU=100\frac{SE}{\overline{X}}.
 $$
 
 The multiannual mean and standard error have units of millimeters, both variance quantities have units of square millimeters, and relative uncertainty is dimensionless before conversion to percent. The workflow masks variance-derived quantities when fewer than two valid annual values are present and masks relative uncertainty when the multiannual mean is not positive.
