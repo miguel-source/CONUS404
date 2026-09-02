@@ -1,8 +1,6 @@
 # CONUS404 water-balance statistical assessment
 
-The repository compiles the code used to evaluate precipitation, actual evapotranspiration (ET), and runoff in the paper. Its structure follows the manuscript analyses and replaces exploratory absolute paths, duplicated cells, inconsistent dataset labels, and partial Python year ranges with reproducible workflows.
-
-The [methods document](docs/METHODS.md) records the equations and processing definitions.
+The repository compiles the code used to evaluate precipitation, actual evapotranspiration (ET), and runoff. Its structure follows the methodology explained in detail in the manuscript: "Assessing Accuracy and Variability of CONUS404 and Related Datasets for Water Resources Planning"  for CONUS404 dataset manipulation and statistical analysis through python and jupyter notebooks workflows. As well tha repository compiles notebooks in order to demonstrate how to access and spatiallty operate CONUS404 dataset using xarray. For more detail in any workflow please contact the Authors. The [methods document](docs/METHODS.md) records the equations and processing definitions.
 
 ## Manuscript organization
 
