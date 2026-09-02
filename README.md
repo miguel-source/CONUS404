@@ -167,6 +167,7 @@ Each gridded accuracy comparison contains model mean, MBE, MAE, RMSE, PBIAS, nMA
 The repository identifies CONUS404 with DOI [10.5065/ZYY0-Y036](https://doi.org/10.5065/ZYY0-Y036) and uses the public products described by the [HyTEST CONUS404 access guide](https://hytest-org.github.io/hytest/dataset_access/CONUS404_ACCESS.html). The acquisition notebooks record the selected variable construction and catalog metadata used in each run.
 
 **Funding**
+
 This research was funded by the United States Geological Survey through the Water Resources Research Act Program National Competitive Grants Program (104g), grant work GR-028464-00001 Cruse-Multi-scale spatio-temporal analysis of the U.S. water budget using CONUS404.
 
 **Acknowledgement:**
