@@ -166,8 +166,15 @@ Each gridded accuracy comparison contains model mean, MBE, MAE, RMSE, PBIAS, nMA
 
 The repository identifies CONUS404 with DOI [10.5065/ZYY0-Y036](https://doi.org/10.5065/ZYY0-Y036) and uses the public products described by the [HyTEST CONUS404 access guide](https://hytest-org.github.io/hytest/dataset_access/CONUS404_ACCESS.html). The acquisition notebooks record the selected variable construction and catalog metadata used in each run.
 
-"Acknowledgement:
-In addition to the GDEX dataset citation, authors are required to include the following citations in publications that base outcomes on this dataset:
+**Funding**
+This research was funded by the United States Geological Survey through the Water Resources Research Act Program National Competitive Grants Program (104g), grant work GR-028464-00001 Cruse-Multi-scale spatio-temporal analysis of the U.S. water budget using CONUS404.
+
+**Acknowledgement:**
+
+The authors would like to thank the United States Geological Survey – USGS, Iowa State Uni-versity, the National Center for Atmospheric Research, and the Iowa Water Center, for providing and supporting the access to hydroclimate data repositories, reviewing and guiding the project through interinstitutional collaboration.   
+
 1. Rasmussen, R.M., F. Chen, C.H. Liu, K. Ikeda, A. Prein, J. Kim, T. Schneider, A. Dai, D. Gochis, A. Dugger, Y. Zhang, A. Jaye, J. Dudhia, C. He, M. Harrold, L. Xue, S. Chen, A. Newman, E. Dougherty, R. Abolafia-Rozenzweig, N. Lybarger, R. Viger, D. Lesmes, K. Skalak, J. Brakebill, D. Cline, K. Dunne, K. Rasmussen, G. Miguez-Macho, 2023: CONUS404: The NCAR/USGS 4-km long-term regional hydroclimate reanalysis over the CONUS. Bulletin American Meteorological Society, 01 August 2023, Pages: E1382 to E1408, DOI: https://doi.org/10.1175/BAMS-D-21-0326.1
 2. Rasmussen, R.M., Chen, F., Liu, C., Ikeda, K., Prein, A., Kim, J., Schneider, T., Dai, A., Gochis, D., Dugger, A., Zhang, Y., Jaye, A., Dudhia, J., He, C., Harrold, M., Xue, L., Chen, S., Newman, A., Dougherty, E., Abolafia-Rozenzweig, R., Lybarger, N., R. Viger, Dunne, K., Rasmussen, K., Miguez-Macho, G., 2023, Four-kilometer long-term regional hydroclimate reanalysis over the conterminous United States (CONUS), 1979-2020: U.S. Geological Survey data release, https://doi.org/10.5066/P9PHPK4F "
+
+“Any use of trade, firm, or product names is for descriptive purposes only and does not imply endorsement by the U.S. Government.”
 
