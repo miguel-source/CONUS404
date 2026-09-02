@@ -49,7 +49,7 @@ $$
 $$
 
 $$
-\mathrm{PBIAS}=100\frac{\sum_t(S_t-O_t)}{\sum_tO_t}.
+\mathrm{PBIAS}=100\frac{\sum_t(S_t-O_t)}{\sum_tO_t}
 $$
 
 Positive PBIAS represents model overestimation and negative PBIAS represents model underestimation.
@@ -57,7 +57,7 @@ Positive PBIAS represents model overestimation and negative PBIAS represents mod
 The analysis normalizes MAE by the multiannual modeled mean:
 
 $$
-\mathrm{nMAE}=100\frac{\mathrm{MAE}}{\overline{S}}.
+\mathrm{nMAE}=100\frac{\mathrm{MAE}}{\overline{S}}
 $$
 
 This denominator reproduces the paper definition. The workflow uses the relevant CONUS404 or CONUS404BA precipitation mean for precipitation, the CONUS404 ET mean for ET, and the CONUS404 basin runoff mean for runoff. At the seasonal scale, the analysis calculates a separate modeled denominator for each season.
