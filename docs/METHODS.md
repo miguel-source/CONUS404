@@ -49,7 +49,7 @@ $$
 $$
 
 $$
-\mathrm{PBIAS}(\%)=100\frac{\sum_t(S_t-O_t)}{\sum_tO_t}.
+\mathrm{PBIAS}=100\frac{\sum_t(S_t-O_t)}{\sum_tO_t}.
 $$
 
 Positive PBIAS represents model overestimation and negative PBIAS represents model underestimation.
