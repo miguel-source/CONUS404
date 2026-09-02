@@ -2,7 +2,7 @@
 
 The repository compiles the code used to evaluate precipitation, actual evapotranspiration (ET), and runoff in the paper. Its structure follows the manuscript analyses and replaces exploratory absolute paths, duplicated cells, inconsistent dataset labels, and partial Python year ranges with reproducible workflows.
 
-The [source-notebook mapping](docs/SOURCE_NOTEBOOK_MAPPING.md) records how every exploratory file was incorporated. The [methods document](docs/METHODS.md) records the equations and processing definitions.
+The [methods document](docs/METHODS.md) records the equations and processing definitions.
 
 ## Manuscript organization
 
