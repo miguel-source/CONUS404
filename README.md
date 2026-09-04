@@ -181,7 +181,7 @@ The authors would like to thank the United States Geological Survey – USGS, Io
 
 If you use this repository, please cite:
 
-Diaz, M. A., & Arenas, A. (2026). *CONUS404 water-balance statistical assessment* [Computer software]. GitHub. https://github.com/miguel-source/CONUS404
+Diaz, M. A., Arenas, A., Doore, K. J., & Abuoliem, D. (2026). *CONUS404 water-balance statistical assessment* [Computer software]. GitHub. https://github.com/miguel-source/CONUS404
 
 
 
