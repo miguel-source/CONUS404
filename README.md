@@ -101,7 +101,6 @@ The workflow uses one common finite and positive cell-year mask across the enabl
 ├── tests/
 ├── docs/
 │   ├── METHODS.md
-│   └── SOURCE_NOTEBOOK_MAPPING.md
 ├── config.example.yml
 ├── environment.yml
 └── README.md
