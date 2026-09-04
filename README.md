@@ -72,7 +72,7 @@ $$
 $$
 \widehat{\mathrm{Var}}_{JK}(\overline{X})=\frac{s^2}{n},\qquad
 SE=\sqrt{\frac{s^2}{n}},\qquad
-RU(\%)=100\frac{SE}{\overline{X}}.
+RU=100\frac{SE}{\overline{X}}.
 $$
 
 The workflow uses one common finite and positive cell-year mask across the enabled datasets within each component. This keeps the valid years identical for precipitation-dataset and ET-dataset comparisons.
